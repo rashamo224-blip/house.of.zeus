@@ -21,12 +21,11 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-black/10 glass">
-      <div className="container-lux flex h-16 items-center justify-between gap-4">
+      <div className="container-lux flex h-24 items-center justify-between gap-4">
         <Link href="/en" className="flex items-center gap-3" aria-label="House of Zeus home">
-          <span className="relative h-12 w-32 overflow-hidden rounded-full">
-            <Image src="/images/house-of-zeus-logo.png" alt="House of Zeus logo" fill className="object-cover" sizes="128px" priority />
+          <span className="relative h-20 w-64 overflow-hidden">
+            <Image src="/images/house-of-zeus-logo-cropped.png" alt="House of Zeus logo" fill className="object-contain" sizes="256px" priority />
           </span>
-          <span className="hidden font-serif text-xl font-semibold tracking-normal sm:inline">House of Zeus</span>
         </Link>
         <nav className="hidden items-center gap-7 text-sm text-muted-foreground md:flex">
           {nav.map(([label, href]) => (

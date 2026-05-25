@@ -14,8 +14,8 @@ export function SiteFooter() {
     <footer className="mt-20 border-t bg-zeus-ink text-zeus-pearl">
       <div className="container-lux grid gap-10 py-12 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
-          <div className="relative h-28 w-72 overflow-hidden rounded-xl border border-white/10">
-            <Image src="/images/house-of-zeus-logo.png" alt="House of Zeus logo" fill className="object-cover" sizes="288px" />
+          <div className="relative h-32 w-80 overflow-hidden">
+            <Image src="/images/house-of-zeus-logo-cropped.png" alt="House of Zeus logo" fill className="object-contain" sizes="320px" />
           </div>
           <p className="mt-5 font-serif text-3xl font-semibold">House of Zeus</p>
           <p className="mt-4 max-w-sm text-sm leading-6 text-white/68">
