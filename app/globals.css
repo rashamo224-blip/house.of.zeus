@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 35 43% 96%;
+  --foreground: 20 5% 8%;
+  --card: 38 40% 98%;
+  --card-foreground: 20 5% 8%;
+  --primary: 20 5% 8%;
+  --primary-foreground: 38 40% 96%;
+  --secondary: 39 29% 78%;
+  --secondary-foreground: 20 5% 8%;
+  --muted: 39 28% 88%;
+  --muted-foreground: 23 10% 35%;
+  --accent: 85 10% 46%;
+  --accent-foreground: 38 40% 96%;
+  --border: 35 22% 78%;
+  --input: 35 22% 78%;
+  --ring: 35 26% 40%;
+}
+
+.dark {
+  --background: 24 9% 9%;
+  --foreground: 38 40% 94%;
+  --card: 24 8% 13%;
+  --card-foreground: 38 40% 94%;
+  --primary: 38 40% 94%;
+  --primary-foreground: 24 9% 9%;
+  --secondary: 32 18% 28%;
+  --secondary-foreground: 38 40% 94%;
+  --muted: 24 8% 18%;
+  --muted-foreground: 35 14% 70%;
+  --accent: 85 10% 46%;
+  --accent-foreground: 38 40% 96%;
+  --border: 30 10% 28%;
+  --input: 30 10% 28%;
+  --ring: 35 30% 72%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(183, 151, 91, 0.15), transparent 34rem),
+    linear-gradient(180deg, #f8f2ea 0%, #f2e7d8 48%, #f7f3ed 100%);
+  color: hsl(var(--foreground));
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+.dark body {
+  background:
+    radial-gradient(circle at top left, rgba(183, 151, 91, 0.12), transparent 34rem),
+    linear-gradient(180deg, #151311 0%, #201c18 52%, #121110 100%);
+}
+
+::selection {
+  background: #141313;
+  color: #f6f0e8;
+}
+
+.container-lux {
+  width: min(1180px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.glass {
+  background: rgba(246, 240, 232, 0.78);
+  backdrop-filter: blur(18px);
+}
+
+.dark .glass {
+  background: rgba(20, 19, 19, 0.78);
+}
+
+.dark .bg-white\/65,
+.dark .bg-white\/60,
+.dark .bg-white\/55 {
+  background-color: rgba(32, 30, 28, 0.72);
+}
+
+.dark .border-black\/10 {
+  border-color: rgba(246, 240, 232, 0.12);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
