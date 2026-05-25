@@ -31,7 +31,7 @@ export default function AccountPage() {
           <Package className="size-5 text-zeus-sage" />
           <h2 className="mt-4 font-serif text-2xl font-semibold">Orders and care profile</h2>
           <p className="mt-2 text-sm leading-6 text-muted-foreground">
-            Store pet preferences, saved addresses, order history, and recommendation signals for Zeus.ai personalization.
+            Store pet preferences, saved addresses, order history, and recommendation signals for House of Zeus personalization.
           </p>
           <Button asChild variant="outline" className="mt-5">
             <Link href="/en/orders">View sample orders</Link>

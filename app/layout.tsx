@@ -14,27 +14,27 @@ const cormorant = Cormorant_Garamond({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
   title: {
-    default: "House of Zeus.ai | Luxury Pet Lifestyle in Kuwait",
-    template: "%s | House of Zeus.ai"
+    default: "House of Zeus | Luxury Comfort for Kuwait Pets",
+    template: "%s | House of Zeus"
   },
   description:
-    "Luxury GCC pet lifestyle essentials for dogs and cats, curated for Kuwait homes, travel, grooming, cooling, and emotional everyday rituals.",
-  applicationName: "House of Zeus.ai",
-  keywords: ["luxury pet ecommerce Kuwait", "GCC pet boutique", "pet cooling essentials", "House of Zeus.ai"],
-  authors: [{ name: "House of Zeus.ai" }],
+    "Luxury comfort for Kuwait's most loved pets. Curated essentials inspired by Zeus, Ouzo, Diva, Blacky, Tiger, and Swaida.",
+  applicationName: "House of Zeus",
+  keywords: ["luxury pet ecommerce Kuwait", "GCC pet boutique", "pet cooling essentials", "House of Zeus"],
+  authors: [{ name: "House of Zeus" }],
   openGraph: {
-    title: "House of Zeus.ai",
-    description: "Premium pet lifestyle for Kuwait and the GCC.",
+    title: "House of Zeus",
+    description: "Luxury comfort for Kuwait's most loved pets.",
     url: "/en",
-    siteName: "House of Zeus.ai",
+    siteName: "House of Zeus",
     images: [{ url: "/images/house-of-pets.png", width: 1400, height: 1118 }],
     locale: "en_KW",
     type: "website"
   },
   twitter: {
     card: "summary_large_image",
-    title: "House of Zeus.ai",
-    description: "Premium pet lifestyle for Kuwait and the GCC.",
+    title: "House of Zeus",
+    description: "Luxury comfort for Kuwait's most loved pets.",
     images: ["/images/house-of-pets.png"]
   }
 };

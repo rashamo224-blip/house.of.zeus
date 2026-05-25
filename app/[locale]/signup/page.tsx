@@ -6,7 +6,7 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata(
   "Sign up",
-  "Create a House of Zeus.ai customer account.",
+  "Create a House of Zeus customer account.",
   "/en/signup"
 );
 
@@ -17,11 +17,11 @@ export default function SignUpPage() {
         <UserPlus className="size-6 text-zeus-sage" />
         <h1 className="mt-4 font-serif text-5xl font-semibold">Create account</h1>
         <p className="mt-4 max-w-md leading-7 text-muted-foreground">
-          Build a pet profile for better product recommendations, faster Kuwait delivery, and early access to private drops.
+          Build a pet profile for better product recommendations, Kuwait delivery within 14 days, and early access to private drops.
         </p>
       </div>
       <form className="rounded-xl border bg-white/65 p-6">
-        <h2 className="font-serif text-2xl font-semibold">Join House of Zeus.ai</h2>
+        <h2 className="font-serif text-2xl font-semibold">Join House of Zeus</h2>
         <div className="mt-5 grid gap-3 md:grid-cols-2">
           <Input placeholder="Full name" autoComplete="name" />
           <Input type="tel" placeholder="Kuwait mobile number" autoComplete="tel" />

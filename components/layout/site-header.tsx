@@ -22,11 +22,11 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-black/10 glass">
       <div className="container-lux flex h-16 items-center justify-between gap-4">
-        <Link href="/en" className="flex items-center gap-3" aria-label="House of Zeus.ai home">
+        <Link href="/en" className="flex items-center gap-3" aria-label="House of Zeus home">
           <span className="relative h-9 w-24 overflow-hidden rounded-full">
-            <Image src="/images/house-of-zeus-logo.png" alt="House of Zeus.ai logo" fill className="object-cover" sizes="96px" priority />
+            <Image src="/images/house-of-zeus-logo.png" alt="House of Zeus logo" fill className="object-cover" sizes="96px" priority />
           </span>
-          <span className="hidden font-serif text-xl font-semibold tracking-normal sm:inline">House of Zeus.ai</span>
+          <span className="hidden font-serif text-xl font-semibold tracking-normal sm:inline">House of Zeus</span>
         </Link>
         <nav className="hidden items-center gap-7 text-sm text-muted-foreground md:flex">
           {nav.map(([label, href]) => (

@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, BadgeCheck, MessageCircle, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ProductCard } from "@/components/products/product-card";
@@ -13,6 +13,29 @@ const fadeUp = {
   hidden: { opacity: 0, y: 18 },
   show: { opacity: 1, y: 0 }
 };
+
+const family = [
+  ["Zeus", "The king of the house. Fluffy, calm, and always supervising."],
+  ["Ouzo", "Tiny, dramatic, affectionate, and impossible not to love."],
+  ["Diva", "Luxury is simply part of her personality."],
+  ["Blacky", "Elegant, mysterious, and silently judging everyone."],
+  ["Tiger", "Calm, lovable, and endlessly gentle beneath the fluff."],
+  ["Swaida", "Quiet chaos wrapped in velvet fur."]
+];
+
+const whyUs = [
+  ["Carefully Curated", "Every item is personally selected for comfort, quality, and aesthetics."],
+  ["Designed for Gulf Living", "Products thoughtfully chosen with Kuwait's climate and lifestyle in mind."],
+  ["Premium Comfort", "Because pets deserve spaces as beautiful and comforting as our own homes."],
+  ["Fast & Caring Support", "We're pet parents too - and we genuinely care about every order."]
+];
+
+const mobileBanners = [
+  "Designed for Kuwait summers.",
+  "Luxury comfort for indoor pets.",
+  "Curated for Gulf homes.",
+  "Because pets are family."
+];
 
 export function HomeClient() {
   return (
@@ -33,42 +56,60 @@ export function HomeClient() {
               <Badge className="border-zeus-gold/50 bg-zeus-pearl/75 text-zeus-ink">Kuwait-first luxury pet lifestyle</Badge>
             </motion.div>
             <motion.h1 variants={fadeUp} className="mt-6 font-serif text-5xl font-semibold leading-[0.96] text-balance md:text-7xl">
-              House of Zeus.ai
+              House of Zeus
             </motion.h1>
             <motion.p variants={fadeUp} className="mt-6 max-w-xl text-base leading-7 text-zeus-ink/72 md:text-lg">
-              Premium essentials for dogs and cats who are family, styled for warm GCC homes and inspired by Zeus, Ouzo,
-              Diva, Blacky, Tiger, and Swaida.
+              Luxury comfort for Kuwait's most loved pets.
+            </motion.p>
+            <motion.p variants={fadeUp} className="mt-4 max-w-2xl text-sm leading-7 text-zeus-ink/68 md:text-base">
+              Thoughtfully curated pet essentials inspired by Zeus, Ouzo, Diva, Blacky, Tiger, and Swaida - designed for
+              Gulf homes and pets who deserve nothing but the very best.
             </motion.p>
             <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-3">
               <Button asChild>
                 <Link href="/en/collections/cooling-essentials">
-                  Shop summer essentials <ArrowRight className="size-4" />
+                  Shop Collection <ArrowRight className="size-4" />
                 </Link>
               </Button>
               <Button asChild variant="secondary">
-                <a href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "96500000000"}`}>
-                  <MessageCircle className="size-4" /> Concierge
-                </a>
+                <Link href="/en/collections/cooling-essentials">Explore Summer Essentials</Link>
               </Button>
             </motion.div>
           </motion.div>
         </div>
       </section>
 
-      <section className="container-lux -mt-12 grid gap-3 md:grid-cols-3">
-        {["Kuwait shipping support", "AI recommendation ready", "Shopify and CJ sync ready"].map((item) => (
-          <div key={item} className="glass rounded-xl border border-black/10 p-4 shadow-soft">
-            <BadgeCheck className="mb-3 size-5 text-zeus-sage" />
-            <p className="text-sm font-medium">{item}</p>
+      <section className="container-lux grid gap-3 py-8 sm:grid-cols-2 lg:grid-cols-4">
+        {mobileBanners.map((banner) => (
+          <div key={banner} className="rounded-xl border bg-white/60 px-4 py-3 text-sm font-medium">
+            {banner}
           </div>
         ))}
+      </section>
+
+      <section className="container-lux grid gap-10 py-16 lg:grid-cols-[0.8fr_1.2fr]">
+        <div>
+          <p className="text-sm uppercase tracking-[0.2em] text-zeus-clay">Brand story</p>
+          <h2 className="mt-3 font-serif text-4xl font-semibold">More Than a Pet Store</h2>
+        </div>
+        <div className="space-y-5 leading-7 text-muted-foreground">
+          <p>House of Zeus was born from a home filled with love, fur, personality, and a few spoiled little rulers.</p>
+          <p>
+            Inspired by our own pets, we carefully curate elegant, practical, and comforting essentials designed for
+            modern pet living in Kuwait and across the Gulf.
+          </p>
+          <p>
+            From cooling comfort for warm summers to cozy luxury accessories, every product is selected with care,
+            aesthetics, and quality in mind.
+          </p>
+        </div>
       </section>
 
       <section className="container-lux py-20">
         <div className="mb-8 flex items-end justify-between gap-5">
           <div>
-            <p className="text-sm uppercase tracking-[0.2em] text-zeus-clay">Curated collections</p>
-            <h2 className="mt-3 font-serif text-4xl font-semibold">Built for GCC pet life</h2>
+            <p className="text-sm uppercase tracking-[0.2em] text-zeus-clay">Featured collections</p>
+            <h2 className="mt-3 font-serif text-4xl font-semibold">Curated for Gulf homes</h2>
           </div>
           <Button asChild variant="outline" className="hidden md:inline-flex">
             <Link href="/en/collections/cooling-essentials">View all</Link>
@@ -92,10 +133,13 @@ export function HomeClient() {
         <div className="container-lux grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
             <Sparkles className="size-6 text-zeus-gold" />
-            <h2 className="mt-5 font-serif text-4xl font-semibold">Summer cooling essentials</h2>
+            <h2 className="mt-5 font-serif text-4xl font-semibold">Designed for Gulf Summers</h2>
             <p className="mt-4 leading-7 text-white/68">
-              Kuwait heat changes the pet routine. This edit focuses on breathable walks, cool rest, hydration,
-              and elevated accessories that still feel beautiful at home.
+              Kuwait summers can be intense - especially for indoor pets with thick fur and sensitive paws.
+            </p>
+            <p className="mt-4 leading-7 text-white/68">
+              That's why we focus on cooling comfort, breathable fabrics, calming spaces, and thoughtfully selected
+              products designed specifically for Gulf living.
             </p>
           </div>
           <div className="grid gap-5 md:grid-cols-2">
@@ -120,26 +164,27 @@ export function HomeClient() {
 
       <section className="container-lux grid gap-8 py-16 lg:grid-cols-[1fr_1.1fr]">
         <div className="rounded-xl bg-zeus-sage p-8 text-white">
-          <p className="text-sm uppercase tracking-[0.2em] text-white/75">Meet Zeus & Friends</p>
-          <h2 className="mt-4 font-serif text-4xl font-semibold">A brand built around real pets, not anonymous SKUs.</h2>
+          <p className="text-sm uppercase tracking-[0.2em] text-white/75">Meet the family</p>
+          <h2 className="mt-4 font-serif text-4xl font-semibold">Meet the Family Behind House of Zeus</h2>
           <p className="mt-5 leading-7 text-white/78">
-            Zeus brings confidence. Ouzo brings warmth. Diva, Blacky, Tiger, and Swaida bring personality,
-            softness, mischief, and grace. Their world shapes every collection.
+            Every collection begins with the pets who made this house feel like home.
           </p>
         </div>
         <div className="grid grid-cols-2 gap-3">
-          {["Zeus", "Ouzo", "Diva", "Blacky", "Tiger", "Swaida"].map((name, index) => (
+          {family.map(([name, text]) => (
             <div key={name} className="rounded-xl border bg-white/60 p-5">
               <p className="font-serif text-2xl font-semibold">{name}</p>
-              <p className="mt-2 text-sm text-muted-foreground">
-                {index < 2 ? "Dog lifestyle muse" : "Cat lifestyle muse"}
-              </p>
+              <p className="mt-2 text-sm leading-6 text-muted-foreground">{text}</p>
             </div>
           ))}
         </div>
       </section>
 
       <section className="container-lux py-16">
+        <div className="mb-8">
+          <p className="text-sm uppercase tracking-[0.2em] text-zeus-clay">Life at House of Zeus</p>
+          <h2 className="mt-3 font-serif text-4xl font-semibold">Small moments, spoiled pets, and everyday luxury.</h2>
+        </div>
         <div className="grid gap-3 md:grid-cols-5">
           {["Morning walk", "Cooling edit", "Chalet weekend", "Grooming ritual", "Cat corner"].map((label) => (
             <div key={label} className="aspect-[3/4] rounded-xl border bg-gradient-to-br from-zeus-pearl via-white to-zeus-sand p-4">
@@ -150,12 +195,27 @@ export function HomeClient() {
         </div>
       </section>
 
+      <section className="container-lux py-16">
+        <div className="mb-8 text-center">
+          <p className="text-sm uppercase tracking-[0.2em] text-zeus-clay">Why choose us</p>
+          <h2 className="mt-3 font-serif text-4xl font-semibold">Why Pet Parents Love House of Zeus</h2>
+        </div>
+        <div className="grid gap-4 md:grid-cols-4">
+          {whyUs.map(([title, text]) => (
+            <div key={title} className="rounded-xl border bg-white/60 p-5">
+              <p className="font-serif text-2xl font-semibold">{title}</p>
+              <p className="mt-3 text-sm leading-6 text-muted-foreground">{text}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <section className="container-lux rounded-xl bg-white/60 p-8 text-center">
-        <p className="text-sm uppercase tracking-[0.2em] text-zeus-clay">Customer notes</p>
-        <blockquote className="mx-auto mt-4 max-w-3xl font-serif text-3xl font-semibold">
-          “Finally, pet essentials that look right in a Kuwait home and feel thoughtful for the pets themselves.”
-        </blockquote>
-        <p className="mt-4 text-sm text-muted-foreground">Early customer, Kuwait City</p>
+        <p className="text-sm uppercase tracking-[0.2em] text-zeus-clay">Join the House of Zeus Family</p>
+        <h2 className="mx-auto mt-4 max-w-3xl font-serif text-4xl font-semibold">
+          Be the first to discover new collections, seasonal essentials, and exclusive pet lifestyle updates.
+        </h2>
+        <Button className="mt-6" variant="default">Join the Family</Button>
       </section>
     </div>
   );

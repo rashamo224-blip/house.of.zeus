@@ -6,6 +6,9 @@ export default function CheckoutPage() {
   return (
     <div className="container-lux py-12">
       <h1 className="font-serif text-5xl font-semibold">Checkout</h1>
+      <p className="mt-4 max-w-2xl text-muted-foreground">
+        Carefully selected for comfort, style, and happy paws.
+      </p>
       <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_380px]">
         <form className="grid gap-6 rounded-xl border bg-white/65 p-6">
           <section>
@@ -36,6 +39,7 @@ export default function CheckoutPage() {
             <p className="flex gap-3"><MapPin className="size-5 text-zeus-gold" /> Kuwait address fields are prepared for local delivery workflows.</p>
             <p className="flex gap-3"><Lock className="size-5 text-zeus-gold" /> Stripe Checkout route is ready for live keys.</p>
             <p className="flex gap-3"><MessageCircle className="size-5 text-zeus-gold" /> WhatsApp handoff can support high-touch orders.</p>
+            <p>Carefully packed and delivered across Kuwait within 14 days.</p>
           </div>
         </aside>
       </div>

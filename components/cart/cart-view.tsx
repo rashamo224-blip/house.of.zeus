@@ -18,7 +18,7 @@ export function CartView() {
         <div className="grid gap-4">
           {items.length === 0 ? (
             <div className="rounded-xl border bg-white/60 p-8">
-              <p>Your cart is waiting for something beautiful.</p>
+              <p>Your furry family deserves something special.</p>
               <Button asChild className="mt-5">
                 <Link href="/en/collections/cooling-essentials">Explore collections</Link>
               </Button>
@@ -55,9 +55,12 @@ export function CartView() {
         </div>
         <aside className="h-fit rounded-xl border bg-white/65 p-6">
           <p className="font-serif text-2xl font-semibold">Order summary</p>
+          <p className="mt-2 text-sm leading-6 text-muted-foreground">
+            Carefully selected for comfort, style, and happy paws.
+          </p>
           <div className="mt-5 grid gap-3 text-sm">
             <div className="flex justify-between"><span>Subtotal</span><span>{formatPrice(subtotal)}</span></div>
-            <div className="flex justify-between"><span>Kuwait shipping estimate</span><span>{formatPrice(shipping)}</span></div>
+            <div className="flex justify-between"><span>Kuwait delivery within 14 days</span><span>{formatPrice(shipping)}</span></div>
             <div className="flex justify-between border-t pt-3 text-base font-semibold"><span>Total</span><span>{formatPrice(subtotal + shipping)}</span></div>
           </div>
           <Button asChild className="mt-6 w-full">

@@ -1,4 +1,4 @@
-# House of Zeus.ai
+# House of Zeus
 
 Production-ready luxury pet ecommerce starter for a GCC/Kuwait-focused brand inspired by Zeus, Ouzo, Diva, Blacky, Tiger, and Swaida.
 
@@ -54,7 +54,7 @@ Use `.env.example` as the source of truth. Required for production:
 
 ## Required Platform Defaults
 
-Every House of Zeus.ai platform build should include:
+Every House of Zeus platform build should include:
 
 - Clear sign-in and sign-up routes
 - Customer account dashboard

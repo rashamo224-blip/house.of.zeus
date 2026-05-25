@@ -6,7 +6,7 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata(
   "Sign in",
-  "Sign in to your House of Zeus.ai customer account.",
+  "Sign in to your House of Zeus customer account.",
   "/en/signin"
 );
 
@@ -17,7 +17,7 @@ export default function SignInPage() {
         <LockKeyhole className="size-6 text-zeus-clay" />
         <h1 className="mt-4 font-serif text-5xl font-semibold">Sign in</h1>
         <p className="mt-4 max-w-md leading-7 text-muted-foreground">
-          Access orders, saved pets, wishlist, delivery addresses, and Zeus.ai recommendations.
+          Access orders, saved pets, wishlist, delivery addresses, and House of Zeus recommendations.
         </p>
       </div>
       <form className="rounded-xl border bg-white/65 p-6">
@@ -30,7 +30,7 @@ export default function SignInPage() {
           </Button>
         </div>
         <p className="mt-5 text-sm text-muted-foreground">
-          New to House of Zeus.ai?{" "}
+          New to House of Zeus?{" "}
           <Link href="/en/signup" className="font-medium text-foreground underline underline-offset-4">
             Create an account
           </Link>

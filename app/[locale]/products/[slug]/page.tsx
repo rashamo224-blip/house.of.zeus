@@ -40,6 +40,17 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             {product.compareAt ? <span className="text-sm text-muted-foreground line-through">{formatPrice(product.compareAt)}</span> : null}
           </div>
           <p className="mt-5 leading-7 text-muted-foreground">{product.story}</p>
+          {product.description ? <p className="mt-4 leading-7 text-muted-foreground">{product.description}</p> : null}
+          {product.perfectFor ? (
+            <div className="mt-6 rounded-xl border bg-white/55 p-4">
+              <p className="font-serif text-2xl font-semibold">Perfect For</p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {product.perfectFor.map((item) => (
+                  <Badge key={item}>{item}</Badge>
+                ))}
+              </div>
+            </div>
+          ) : null}
           <p className="mt-4 rounded-xl border bg-white/55 p-4 text-sm leading-6">
             <span className="font-medium">AI recommendation note:</span> {product.aiReason}
           </p>
@@ -54,7 +65,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
               <Star className="size-4 fill-zeus-gold text-zeus-gold" /> {product.rating} rating from {product.reviews} reviews
             </p>
             <p className="inline-flex items-center gap-2">
-              <Truck className="size-4" /> Kuwait delivery support, 2-4 days for stocked inventory
+              <Truck className="size-4" /> Kuwait delivery support within 14 days
             </p>
             <p className="inline-flex items-center gap-2">
               <ShieldCheck className="size-4" /> Secure Stripe checkout and customer account ready
@@ -71,7 +82,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         </div>
       </div>
       <section className="mt-20">
-        <h2 className="font-serif text-4xl font-semibold">Recommended by Zeus.ai</h2>
+        <h2 className="font-serif text-4xl font-semibold">Recommended by House of Zeus</h2>
         <div className="mt-6 grid gap-5 md:grid-cols-3">
           {recommended.map((item) => (
             <ProductCard key={item.id} product={item} />

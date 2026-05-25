@@ -8,12 +8,12 @@ export const directionByLocale: Record<Locale, "ltr" | "rtl"> = {
 
 export const dictionary = {
   en: {
-    shipping: "Kuwait same-week delivery",
+    shipping: "Kuwait delivery within 14 days",
     whatsapp: "WhatsApp support",
     checkout: "Checkout"
   },
   ar: {
-    shipping: "توصيل داخل الكويت خلال الأسبوع",
+    shipping: "توصيل داخل الكويت خلال 14 يوم",
     whatsapp: "دعم واتساب",
     checkout: "الدفع"
   }

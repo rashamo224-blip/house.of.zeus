@@ -3,6 +3,8 @@ export type Product = {
   slug: string;
   name: string;
   story: string;
+  description?: string;
+  perfectFor?: string[];
   price: number;
   compareAt?: number;
   currency: "KWD";
@@ -18,21 +20,24 @@ export type Product = {
 };
 
 export const collections = [
-  { slug: "cooling-essentials", name: "Cooling Essentials", tone: "For Kuwait summer walks and shaded balcony rituals." },
-  { slug: "pet-fashion", name: "Pet Fashion", tone: "Soft tailoring, elevated textures, polished everyday moments." },
-  { slug: "luxury-beds", name: "Luxury Beds", tone: "Interior-friendly rest pieces for calm, beautiful homes." },
-  { slug: "grooming-tech", name: "Grooming Tech", tone: "Quiet tools that make care feel gentle and precise." },
+  { slug: "cooling-essentials", name: "Cooling Essentials", tone: "Created for Kuwait summers and everyday indoor comfort." },
+  { slug: "pet-fashion", name: "Pet Fashion", tone: "Elegant everyday styles with personality and charm." },
+  { slug: "luxury-beds", name: "Luxury Beds", tone: "Soft, calming spaces for pets who rule the home." },
+  { slug: "grooming-tech", name: "Grooming & Care", tone: "Daily essentials designed for gentle, stress-free care." },
   { slug: "travel-accessories", name: "Travel Accessories", tone: "Airport, chalet, and weekend-ready comfort." },
-  { slug: "cat-lifestyle", name: "Cat Lifestyle", tone: "Elegant enrichment for Diva, Blacky, Tiger, and Swaida energy." },
+  { slug: "cat-lifestyle", name: "Cat Lifestyle", tone: "Curated comfort for curious little queens and kings." },
   { slug: "dog-lifestyle", name: "Dog Lifestyle", tone: "Modern essentials inspired by Zeus and Ouzo." }
 ];
 
 export const products: Product[] = [
   {
     id: "hoz-cool-vest-01",
-    slug: "zeus-cooling-walk-vest",
-    name: "Zeus Cooling Walk Vest",
-    story: "A lightweight cooling vest designed for warm GCC walks without compromising elegance.",
+    slug: "zeus-cooling-cloud-mat",
+    name: "Zeus Cooling Cloud Mat",
+    story: "A lightweight cooling mat designed to help pets stay cool and comfortable during warm Kuwait days.",
+    description:
+      "Soft, breathable, and easy to clean, the Zeus Cooling Cloud Mat blends beautifully into modern homes while giving your pet a refreshing place to rest.",
+    perfectFor: ["Indoor comfort", "Summer naps", "Travel", "Fluffy pets", "Everyday cooling relief"],
     price: 18.5,
     compareAt: 22,
     currency: "KWD",
@@ -43,14 +48,15 @@ export const products: Product[] = [
     rating: 4.9,
     reviews: 42,
     inventory: 24,
-    aiReason: "Recommended for dogs who walk early mornings or evenings during Kuwait summer.",
-    attributes: { Fit: "Adjustable", Care: "Hand wash", Delivery: "Kuwait 2-4 days" }
+    aiReason: "Perfect for indoor comfort, summer naps, travel, fluffy pets, and everyday cooling relief.",
+    attributes: { Perfect: "Indoor comfort", Care: "Easy to clean", Delivery: "Kuwait delivery within 14 days" }
   },
   {
     id: "hoz-bowl-01",
     slug: "ouzo-stoneware-dining-set",
     name: "Ouzo Stoneware Dining Set",
     story: "Low-profile bowls with a sand-glazed finish for pet corners that belong in the room.",
+    perfectFor: ["Modern homes", "Daily dining", "Cats and dogs"],
     price: 24,
     currency: "KWD",
     collection: "luxury-beds",
@@ -68,6 +74,7 @@ export const products: Product[] = [
     slug: "diva-atelier-climbing-tower",
     name: "Diva Atelier Climbing Tower",
     story: "A sculptural cat tower with soft boucle surfaces and a small footprint for apartments.",
+    perfectFor: ["Curious cats", "Apartment corners", "Soft climbing comfort"],
     price: 68,
     currency: "KWD",
     collection: "cat-lifestyle",
@@ -85,6 +92,7 @@ export const products: Product[] = [
     slug: "blacky-quiet-grooming-brush",
     name: "Blacky Quiet Grooming Brush",
     story: "A gentle deshedding tool with a premium grip and low-stress grooming rhythm.",
+    perfectFor: ["Daily care", "Sensitive pets", "Stress-free grooming"],
     price: 12.75,
     currency: "KWD",
     collection: "grooming-tech",
@@ -102,6 +110,7 @@ export const products: Product[] = [
     slug: "swaida-cabin-travel-carrier",
     name: "Swaida Cabin Travel Carrier",
     story: "A structured neutral carrier built for vet visits, weekend stays, and travel days.",
+    perfectFor: ["Travel", "Vet visits", "Weekend stays"],
     price: 39.5,
     currency: "KWD",
     collection: "travel-accessories",
@@ -119,6 +128,7 @@ export const products: Product[] = [
     slug: "tiger-silk-touch-bandana",
     name: "Tiger Silk-Touch Bandana",
     story: "A soft neutral accessory that photographs beautifully without feeling costume-like.",
+    perfectFor: ["Everyday style", "Photos", "Gifting"],
     price: 8.25,
     currency: "KWD",
     collection: "pet-fashion",
